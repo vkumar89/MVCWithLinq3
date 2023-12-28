@@ -1,0 +1,14 @@
+﻿@model MVCWithLinq3.Models.EmpDept
+<h2 style="text-align:center;background-color:yellowgreen;color:orangered">Employee Details</h2>
+<table border="1" align="center">
+    <tr> <td>Eid:</td> <td>@Model.Eid</td> </tr>
+    <tr> <td>Ename:</td> <td>@Model.Ename</td> </tr>
+    <tr> <td>Job:</td> <td>@Model.Job</td> </tr>
+    <tr> <td>Salary:</td> <td>@Model.Salary</td> </tr>
+    <tr> <td>Did:</td> <td>@Model.Did</td> </tr>
+    <tr> <td>Dname:</td> <td>@Model.Dname</td> </tr>
+    <tr> <td>Location:</td> <td>@Model.Location</td> </tr>
+    <tr>
+        <td colspan="2" align="center">@Html.ActionLink("Back to Employee Details", "DisplayEmployees")</td>
+    </tr>
+</table>

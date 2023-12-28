@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MVCWithLinq3.Models.EmpDept>
+@{
+    ViewBag.Title = "DisplayEmployees";
+}
+
+<h1 style="background-color:gold;color:red; text-align:center" ><strong>DisplayEmployees</strong></h1>
+<table border="1" align="center" class="table table-active">
+    <tr>
+        
+        <th>@Html.DisplayNameFor(E => E.Eid)</th>
+        <th>@Html.DisplayNameFor(E => E.Ename)</th>
+        <th>@Html.DisplayNameFor(E => E.Job)</th>
+        <th>@Html.DisplayNameFor(E => E.Salary)</th>
+        <th>@Html.DisplayNameFor(E => E.Did)</th>
+        <th>@Html.DisplayNameFor(E => E.Dname)</th>
+        <th>@Html.DisplayNameFor(E => E.Location)</th>
+        <th>Actions</th>
+
+        
+    </tr>
+
+
+    @foreach (var Emp in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(E => Emp.Eid)</td>
+            <td>@Html.DisplayFor(E => Emp.Ename)</td>
+            <td>@Html.DisplayFor(E => Emp.Job)</td>
+            <td>@Html.DisplayFor(E => Emp.Salary)</td>
+            <td>@Html.DisplayFor(E => Emp.Did)</td>
+            <td>@Html.DisplayFor(E => Emp.Dname)</td>
+            <td>@Html.DisplayFor(E => Emp.Location)</td>
+            <td>
+                @Html.ActionLink("View", "DisplayEmployee", new { Eid = Emp.Eid })
+                @Html.ActionLink("Edit", "EditEmployee", new { Eid = Emp.Eid })
+                @Html.ActionLink("Delete", "DeleteEmployee", new { Eid = Emp.Eid }, new { onclick = "return confirm('Are you sure of deleting the record?')" })
+            </td>
+
+        </tr>
+    }
+
+    <tr >
+        <td colspan="9" align="center">
+            @Html.ActionLink("Add Employee", "AddEmployee")
+        </td>
+    </tr>
+
+</table>

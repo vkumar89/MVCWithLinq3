@@ -1,0 +1,51 @@
+﻿@model MVCWithLinq3.Models.EmpDept
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+<h1 style="background-color:gold;color:red; text-align:center"><strong>AddEmployee</strong></h1>
+
+<table border="1" align="center" class="table table-active">
+    @using (Html.BeginForm("AddEmployee", "Employee"))
+    {
+        <tr>
+            <td>@Html.DisplayNameFor(E => E.Eid)</td>
+            <td>@Html.TextBoxFor(E => E.Eid)</td>
+        </tr>
+         <tr>
+            <td>@Html.DisplayNameFor(E => E.Ename)</td>
+            <td>@Html.TextBoxFor(E => E.Ename)</td>
+        </tr>
+         <tr>
+            <td>@Html.DisplayNameFor(E => E.Job)</td>
+            <td>@Html.TextBoxFor(E => E.Job)</td>
+        </tr>
+         <tr>
+            <td>@Html.DisplayNameFor(E => E.Salary)</td>
+            <td>@Html.TextBoxFor(E => E.Salary)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(E => E.Did)</td>
+            <td>@Html.TextBoxFor(E => E.Did)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(E => E.Dname)</td>
+            <td>@Html.TextBoxFor(E => E.Dname)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(E => E.Location)</td>
+            <td>@Html.TextBoxFor(E => E.Location)</td>
+        </tr> 
+        <tr>
+            
+            <td colspan="2" align="center">
+                <input type="submit", value="Submit" class="btn btn-outline-success" />
+                <input type="reset", value="Reset" class="btn btn-outline-danger" />
+                <button class="btn btn-outline-info"> @Html.ActionLink("Back to Display Employee", "DisplayEmployees")</button>
+            </td>
+        </tr>
+        
+
+    }
+
+</table>
