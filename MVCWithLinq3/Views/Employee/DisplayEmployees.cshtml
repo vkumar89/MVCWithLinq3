@@ -3,8 +3,8 @@
     ViewBag.Title = "DisplayEmployees";
 }
 
-<h1 style="background-color:gold;color:red; text-align:center" ><strong>DisplayEmployees</strong></h1>
-<table border="1" align="center" class="table table-active">
+<h1 @*style="background-color:gold;color:red;*@ style="text-align:center" ><strong>DisplayEmployees</strong></h1>
+<table border="1" cellspacing="10" align="center" @*class="table table-active"*@>
     <tr>
         
         <th>@Html.DisplayNameFor(E => E.Eid)</th>

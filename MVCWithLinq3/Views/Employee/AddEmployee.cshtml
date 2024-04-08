@@ -3,9 +3,9 @@
     ViewBag.Title = "AddEmployee";
 }
 
-<h1 style="background-color:gold;color:red; text-align:center"><strong>AddEmployee</strong></h1>
+<h1 style="@*background-color:gold;color:red;*@ text-align:center"><strong>AddEmployee</strong></h1>
 
-<table border="1" align="center" class="table table-active">
+<table border="1" align="center" @*class="table table-active"*@>
     @using (Html.BeginForm("AddEmployee", "Employee"))
     {
         <tr>

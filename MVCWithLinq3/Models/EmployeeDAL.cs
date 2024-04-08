@@ -78,7 +78,7 @@ namespace MVCWithLinq3.Models
         #endregion
 
 
-        #region inser employee
+       #region inser employee
         public void Employee_Insert(EmpDept obj)
         {
             Employee Emp = new Employee
